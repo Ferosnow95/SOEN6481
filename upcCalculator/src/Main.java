@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -10,34 +9,51 @@ public class Main {
         char operator;
         char unit;
         String a="";
-
+        boolean go = true;
 
 
         double result = 0.00;
-        //DecimalFormat df = new DecimalFormat("#.##");
+
         Scanner input = new Scanner(System.in);
 
-        System.out.println("-----Please Select your unit---------\n" +
+        System.out.println("-----Welcome,Please Select your unit---------\n" +
                 "1 for Centimiter\n" +
                 "2 for meter\n" +
                 "3 for Inches\n" +
                 "------------------------------------------------" );
 
-        unit = input.next().charAt(0);
 
-        switch (unit){
+        while (go){
 
-            case '1':
-                a="cm";
-                break;
-            case '2':
-                a="m";
-                break;
-            case '3':
-                a="in";
-                break;
+            unit = input.next().charAt(0);
+            switch (unit){
+
+                case '1':
+                    a="cm";
+                    go=false;
+                    break;
+                case '2':
+                    a="m";
+                    go=false;
+                    break;
+                case '3':
+                    a="in";
+                    go=false;
+                    break;
+                default:
+
+                    System.err.println("Invalid option selected");
+                    break;
+            }
         }
+        go=true;
+      /*
 
+            System.out.println("Please Renter the correct Selection");
+
+
+
+        }else {}*/
         System.out.println("Please Enter your first Numnber");
         x = input.nextFloat();
 
@@ -52,45 +68,59 @@ public class Main {
                 "S for Approximate distance from Parabola\n" +
                 "P for Universal Parabola Constant\n" +
                 "\"-------------------------------------------------\" ");
-        operator = input.next().charAt(0);
+
+        while (go){
+            operator = input.next().charAt(0);
 
 
-        switch (operator) {
+            switch (operator) {
 
 
-            case '+':
-                result = x + y;
-                break;
-            case '-':
-                result = x - y;
-                break;
-            case '*':
-                result = x * y;
-                break;
-            case '/':
-                result = x / y;
-                break;
-            case 's':
-                result = upc / x;
-                break;
-            case 'p':
-                result = upc;
-                break;
-        }
-        if (operator=='s'||operator=='p'){
+                case '+':
+                    result = x + y;
+                    go=false;
+                    break;
+                case '-':
+                    result = x - y;
+                    go=false;
+                    break;
+                case '*':
+                    result = x * y;
+                    go=false;
+                    break;
+                case '/':
+                    result = x / y;
+                    go=false;
+                    break;
+                case 's':
+                    result = upc / x;
+                    go=false;
+                    break;
+                case 'p':
+                    result = upc;
+                    go=false;
+                    break;
 
-            System.out.println("-Result---------------------------\n"+
-                    result+"\n"+
-                    "-------------------------------------");
+                default:
+                    System.out.println("Incorrect operator, Please Select Again");
+                    break;
+            }
 
-        }
-        else {
-            System.out.println("-Result---------------------------\n"+
-                    result+a+"\n"+
-                    "-------------------------------------");
-        }
 
-    }
+            if (operator=='s'||operator=='p'){
+
+                System.out.println("-Result---------------------------\n"+
+                        result+"\n"+
+                        "----------------------------------------------");
+
+            }
+            else {
+                System.out.println("-Result---------------------------\n"+
+                        result+a+"\n"+
+                        "-----------------------------------------------");
+            }
+
+        }}
 
     public static double sqrtRoot() {
         double d = 2;
