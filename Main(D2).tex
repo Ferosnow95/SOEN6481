@@ -17,7 +17,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{dingbat}
-
+\usepackage{comment}
 \pagestyle{fancy}
 \setlength\headheight{15pt}
 \fancyhead[L]{Student ID: 40076898}
@@ -65,7 +65,7 @@
 % If your reference list includes text notes as well as references,
 % include the following line; otherwise, comment it out.
 
-\renewcommand\refname{References and Notes}
+
 
 % The following lines set up an environment for the last note in the
 % reference list, which commonly includes acknowledgments of funding,
@@ -91,7 +91,7 @@
 
 % Include your paper's title here
 
-\title{The Universal Parabolic Constant\\ \textbf{Eternity Numbers}}
+\title{The Universal Parabolic Constant\\ \textbf{Eternity Numbers (D2)}}
 \date{2018\\ July}
 \author{By Ali Zafar Iqbal\\\\ Department of Computer Science \\Concordia University }
 
@@ -108,7 +108,7 @@
 
 % Place your abstract within the special {sciabstract} environment.
 \tableofcontents
-\graphicspath{ {./Universal Parabolic Constant Mindmap/}{./images2/} }
+
 
 
 
@@ -122,31 +122,38 @@
 
 \chapter{User Stories}
     
-   Project based user stories are created to try and comprehend the scope of the project's  base user requirements .  As one of the prerequisites for the project report,  The following initial User stories were created so characterize the user requirements for the calculator and its overarching functionalities 
+   Project based user stories are created to try and comprehend the scope of the project's  base user requirements .  As one of the prerequisites for the project report,  The following initial User stories were created so characterize the user requirements for the calculator and its overarching functionalities, as a global constraint for the calculator, all of the processed results for \textbf{Arithmetic operands} should output for in atleast 2 Decimal places.
+   \hfill \break\\
+   
+   \noindent User Stories were prioritize based on the hypothesized domain knowledge of the concrete architecture of a calculator in the previous deliverable  and the actual user requirements for the UPC Calculator, Variables such functional dependencies also contributed to the prioritization decisions to streamline the implementation process and conserve time. The \textbf{Fibonacci Sequence} was used for user story estimation.
 
 \begin{quote}
-                \section{US1 - Select and Input Calculation Numbers}
+                \section{US1 - Select and allow Numerical input}
                 
                 \begin{tabular}{ |p{4cm}|p{10cm}| }
                  \hline
-                 \multicolumn{2}{|c|}{\textbf{US1 - Select and Input Calculation Numbers}} \\
+                 \multicolumn{2}{|c|}{\textbf{US1 - Select and allow Numerical input}} \\
                  \hline
                  \textbf {Story ID}& US1  \\
                  \hline
                  \textbf{Priority} & HIGH \\
                  \hline
-                 \textbf{Description}   & As an user of calculator, I want to easily input the digital numbers when I want an calculation to be done  \\
+                 \textbf{Description}   & As an user of calculator, I want to easily input digital numerical numbers of my choosing so that I can perform the calculations I want.  \\
                  \hline
                  \textbf{Acceptance}& 
                 
-                 - I know I'm done when I press the displayed number is equal to the numanical press on the keyboard
+                 - I know I'm done when I press the displayed number is equal to the numerical press on the keyboard
                 
                 \\
                  \hline
-                 \textbf{Estimate} &  0.4  point  \\
+                 \textbf{Estimate} &  1  point  \\
                  \hline
                  \textbf{Constrains}& The display cannot start from 0 ie Input 01 = "1" / Must not accept characters  \\
-                 \hline
+                \hline
+                
+                  \hline
+                 \textbf {}&User Story Implemented \\
+                \hline
                 \end{tabular}
             \hfill\break\\\\
                 
@@ -154,16 +161,16 @@
         
         
         
-        \section{US2 - Select Operands for Calculations}
+        \section{US2 - Select Operands for Arithmetic Calculations}
                 \begin{tabular}{ |p{4cm}|p{10cm}| }
                  \hline
-                 \multicolumn{2}{|c|}{\textbf{US2 - Select Operands for Calculations}} \\
+                 \multicolumn{2}{|c|}{\textbf{US2 - Select Operands for Arithmetic Calculations}} \\
                  \hline
                  \textbf {Story ID}& US2  \\
                  \hline
                  \textbf{Priority} & HIGH \\
                  \hline
-                 \textbf{Description}   &  As an user of calculator, I want to be able to chose form a selection of all the Arithmetic mathematical operations for doing my calculations   \\
+                 \textbf{Description}   &  As an user of calculator, I want to be able to chose form a selection of all the Arithmetic mathematical operations so that I can perform my calculations   \\
                  \hline
                  \textbf{Acceptance}& 
                 
@@ -171,179 +178,113 @@
                 
                 \\
                  \hline
-                 \textbf{Estimate} &  0.4  point  \\
+                 \textbf{Estimate} &  3 points  \\
                  \hline
-                 \textbf{Constrains}& The display cannot start from 0 ie Input 01 = "1" / Must not accept characters  \\
+                 \textbf{Constrains}& The selection display should be legible line after line   \\
                  \hline
+                 \textbf {}&User Story Implemented \\
+                \hline
                 \end{tabular}
             \hfill\break\\\\
-        
-         \section{US3 - Subtract two Numbers }
+    
+
+       
+              \section{US3 - Calculate the Universal Parabolic Constant}
                 \begin{tabular}{ |p{4cm}|p{10cm}| }
                  \hline
-                 \multicolumn{2}{|c|}{\textbf{US3 - Subtract two Numbers} } \\
+                 \multicolumn{2}{|c|}{\textbf{US3 - Calculate the Universal Parabolic Constant} } \\
                  \hline
                  \textbf {Story ID}& US3  \\
                  \hline
                  \textbf{Priority} & HIGH \\
                  \hline
-                 \textbf{Description}   &  As an user of calculator,I want the calculators be able to subtract the two numbers so that I can see the difference between them or use them as apart of a further calculation\\
-                 \hline
-                 \textbf{Acceptance}& 
-                
-                 -I know I am done when, The difference of two numbers ie 2-1=1
-                
-                \\
-                 \hline
-                 \textbf{Estimate} &  0.2  point  \\
-                 \hline
-                 \textbf{Constrains}& The calculator should display accurately \textbf{2} Decimal places when showing the results \\
-                 \hline
-                \end{tabular}
-            
-   \newpage
-         \section{US4 - Add two Numbers }
-                \begin{tabular}{ |p{4cm}|p{10cm}| }
-                 \hline
-                 \multicolumn{2}{|c|}{\textbf{US4 - Add two Numbers } } \\
-                 \hline
-                 \textbf {Story ID}& US4  \\
-                 \hline
-                 \textbf{Priority} & MEDIUM \\
-                 \hline
-                 \textbf{Description}   &  s an user of calculator, I want the calculators be able to add the two numbers so that I can see the Sum of the two numbers or use them as apart of a further calculations\\
-                 \hline
-                 \textbf{Acceptance}& 
-                
-                 I know I am done when, The addition of two numbers ie 2+1=3
-                
-                \\
-                 \hline
-                 \textbf{Estimate} &  0.2  point  \\
-                 \hline
-                 \textbf{Constrains}& The calculator should display accurately \textbf{2} Decimal places when showing the results \\
-                 \hline
-                \end{tabular}
-            \hfill\break\\
-            
-            
-            \section{US5 - Divide two Numbers }
-                \begin{tabular}{ |p{4cm}|p{10cm}| }
-                 \hline
-                 \multicolumn{2}{|c|}{\textbf{US6 - Divide two Numbers} } \\
-                 \hline
-                 \textbf {Story ID}& US5  \\
-                 \hline
-                 \textbf{Priority} & MEDIUM \\
-                 \hline
-                 \textbf{Description}   & As an user of calculator, I want the  calculator to be able to divide my two entered Numbers and show the result so that I can see their division and/maybe use them as apart of a further calculation \\
-                 \hline
-                 \textbf{Acceptance}& 
-                
-                 I know I am done when,The Division of two numbers is 2/2=1
-                
-                \\
-                 \hline
-                 \textbf{Estimate} &  0.2  point  \\
-                 \hline
-                 \textbf{Constrains}& The calculator should display accurately \textbf{2} Decimal places when showing the results \\
-                 \hline
-                \end{tabular}
-            \hfill\break\\
-            
-            
-              \section{US6 - Multiply Two Numbers  }
-                \begin{tabular}{ |p{4cm}|p{10cm}| }
-                 \hline
-                 \multicolumn{2}{|c|}{\textbf{US6 - Multiply two Numbers } } \\
-                 \hline
-                 \textbf {Story ID}& US6  \\
-                 \hline
-                 \textbf{Priority} & MEDIUM \\
-                 \hline
-                 \textbf{Description}   & As an user of calculator, I want the  calculator to be able to multiply my two entered Numbers and show the result so that I can see their multiplication and/maybe use them as apart of a further calculation \\
-                 \hline
-                 \textbf{Acceptance}&
-                
-                 I know I am done when,The Multiplication of two numbers is ie 2*2=4
-                
-                \\
-                 \hline
-                 \textbf{Estimate} &  0.2  point  \\
-                 \hline
-                 \textbf{Constrains}& The calculator should display accurately \textbf{2} Decimal places when showing the results \\
-                 \hline
-                \end{tabular}
-            \hfill\break\\
-            
-            
-              \section{US7 - Calculate the Universal Parabolic Constant}
-                \begin{tabular}{ |p{4cm}|p{10cm}| }
-                 \hline
-                 \multicolumn{2}{|c|}{\textbf{US7 - Calculate the Universal Parabolic Constant} } \\
-                 \hline
-                 \textbf {Story ID}& US7  \\
-                 \hline
-                 \textbf{Priority} & HIGH \\
-                 \hline
-                 \textbf{Description}   & As an user of calculator, I to able to utilize the Universal Parabolic Constant as a constant in my calculations/functions \\
+                 \textbf{Description}   & As an user of calculator, I want the calculator to allow the user Universal Parabolic Constant as a constant so that I can utilize it in my calculations/functions \\
                  \hline
                  \textbf{Acceptance}& 
                 
                  I know I am done when, I press the "P" constant and the output is approximately "2.29558714939 \\
                  \hline
-                 \textbf{Estimate} &  1  point  \\
+                 \textbf{Estimate} &  8 points  \\
                  \hline
-                 \textbf{Constrains}& The calculator should accurately display  \textbf{10} Decimal places when showing the results \\
+                 \textbf{Constrains}& The calculator should accurately display  \textbf{at least 10 Decimal places} when showing the results  \\
                  \hline
+                         \textbf {}&User Story Implemented \\
+                \hline
                 \end{tabular}
             \hfill\break\\
             
-             \section{US8 - Calculate the Average distance from Arc Extrema}
+             \section{US4 - Calculate the approximate distance from arc of parabola}
                 \begin{tabular}{ |p{4cm}|p{10cm}| }
                  \hline
-                 \multicolumn{2}{|c|}{\textbf{US8 -Calculate the Average distance from Arc Extrema} } \\
+                 \multicolumn{2}{|c|}{\textbf{US4 -Calculate the approximate distance from arc of parabola} } \\
                  \hline
-                 \textbf {Story ID}& US8  \\
+                 \textbf {Story ID}& US4  \\
                  \hline
                  \textbf{Priority} & HIGH \\
                  \hline
-                 \textbf{Description}   & As an user of calculator, I want to calculate the Arc distance utilizing the Universal parabolic constant from my entered number point and display the average distance to the arc extrema  \\
+                 \textbf{Description}   & As an user of calculator, I want to be able calculate the Arc distance from my entered point utilizing the Universal parabolic constant so that, I can get the approximate distance to the arc extreme from the point.  \\
                  \hline
                  \textbf{Acceptance}& 
                 
-                 I know I am done when,  When the result output is within the range of the the actual average distance. \\
+                 I know I am done when,  When the result output is within the range of the the actual approximate distance. \\
                  \hline
-                 \textbf{Estimate} &  1  point  \\
+                 \textbf{Estimate} &  2  points  \\
                  \hline
-                 \textbf{Constrains}& The result output should be displayed in "cm" value  \\
+                 \textbf{Constrains}& The result output should be displayed in the selected input units  \\
                  \hline
+                         \textbf {}&User Story Implemented \\
+                \hline
                 \end{tabular}
             \hfill\break\\
             
             
             
-               \section{US9 - Calculate the Approximate Surface Area}
+               \section{US5 - Calculate the approximate Surface Area}
                 \begin{tabular}{ |p{4cm}|p{10cm}| }
                  \hline
-                 \multicolumn{2}{|c|}{\textbf{US9 - Calculate the Approximate Surface Area} } \\
+                 \multicolumn{2}{|c|}{\textbf{US5- Calculate the approximate Surface Area} } \\
                  \hline
-                 \textbf {Story ID}& US9  \\
+                 \textbf {Story ID}& US5  \\
                  \hline
                  \textbf{Priority} & LOW \\
                  \hline
-                 \textbf{Description}   & As an user of calculator, I want to be able to calculate the average surface area within a simulated arc utilizing the Universal parabolic constant and display the average aproximate surface area covered by the arc. \\
+                 \textbf{Description}   & As an user of calculator, I want to be able to calculate the approximate surface area within a simulated arc utilizing the Universal parabolic constant so that, I can get the approximate  surface area covered by the arc. \\
                  \hline
                  \textbf{Acceptance}& 
                 
                  I know I am done when,  When the result output is within the range of the the actual average area. \\
                  \hline
-                 \textbf{Estimate} &  0.5  point  \\
+                 \textbf{Estimate} &  2  points  \\
                  \hline
-                 \textbf{Constrains}& The result output should be displayed in "cm" value  \\
+                 \textbf{Constrains}& The result output should be displayed in "cm" value with 2 decimal places of  accuracy \\
+                 \hline
+                 
+                \end{tabular}
+            \hfill\break\\
+            
+              \section{US6 - Generate area of surface constant (X-Axis)}
+                \begin{tabular}{ |p{4cm}|p{10cm}| }
+                 \hline
+                 \multicolumn{2}{|c|}{\textbf{US6 - Generate Area of surface constant} } \\
+                 \hline
+                 \textbf {Story ID}& US6  \\
+                 \hline
+                 \textbf{Priority} & LOW \\
+                 \hline
+                 \textbf{Description}   & As an user of calculator, I want to be able to press a button to generate the area constant of the Universal parabolic constant In order to utilize it in further calculations. \\
+                 \hline
+                 \textbf{Acceptance}& 
+                
+               I know I am done when, I press the "Area x" constant button and the output is approximately "14.4235994" \\
+                 \hline
+                 \textbf{Estimate} &  2 points  \\
+                 \hline
+                 \textbf{Constrains}&  The calculator should accurately display  \textbf{atleast 10 Decimal places} when showing the results   \\
                  \hline
                 \end{tabular}
             \hfill\break\\
+            
+            
              
         
         
@@ -364,56 +305,73 @@
 \chapter{Backwards Tractability Matrix}
 
 
-Tractability is useful instrument in SRS documentation which allows development teams to analyse documentations and trace problems to their initial inceptions, as one of the requirements for this project's documentation process, enlisted user stories are back traced to their initial sources to allow relateable contex to their eventual implementations,
+Tractability is useful element in SRS documentation which allows development teams to analyse documentations and trace problems to their initial inceptions, as one of the requirements for this project's documentation process, enlisted user stories are back traced to their initial sources to allow reliable context to their eventual implementations,
 
     
 \begin{quote}
 \centering 
 \hfill
 
-\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
 
 \hline
-& \textbf{Interviewee} & \textbf{Online Sources} & \textbf{Personal Hypothesis }\\
+& \textbf{Interviewee} & \textbf{Online Sources} & \textbf{Domain Modal}&\textbf{Use Case}\\
 \hline
 
-US\#1&&&\checkmark\\
+US\#1&&&\checkmark&\checkmark\\
 \hline
-US\#2 &&&\checkmark\\
+US\#2 &&&\checkmark&\checkmark\\
 \hline
-US\#3&&&\checkmark\\
-\hline
-
-US\#4&&&\checkmark\\
+US\#3&\checkmark&\checkmark&\checkmark&\checkmark\\
 \hline
 
-US\#5&&&\checkmark\\
+US\#4&\checkmark&&\checkmark&\checkmark\\
 \hline
 
-US\#6&&&\checkmark\\
+US\#5&&\checkmark&&\\
 \hline
 
-US\#7&\checkmark&&\\
+US\#6&\checkmark&\checkmark&&\\
 \hline
 
-US\#8&\checkmark&&\\
-\hline
-
-US\#9&\checkmark&\checkmark&\\
 \hline
 
 
 \end{tabular}
 \end{quote}
+
+
+\chapter{Implementation}
+
+The  Universal Parabolic (\textbf{UPC calculator}) calculator is implemented in the form of an conditional based calculator, where the user can perform calculations based on their selection of parameters/operands. The calculator also utilizes the Universal parabolic constant to calculate the approximate point distance from a parabolic arc. both of which are implemented from scratch in JAVA without the use of any library functions. 
+\hfill\break\\
+\noindent The Source of the calculator can be found on the linked repository [1] or attached to this document.
+
+\section{User Stories Implemented}
+
+The following user stories were implemented in the UPC calculator, the User story selections were based purely on prioritization hierarchy of the stories, the functional requirements and the overall domain requirements of a calculator's core functionalities.
+
+\begin{enumerate}
+    \item\textbf{ US1} - Select and allow Numerical input
+    \item \textbf{US2} - Select Operands for Calculations
+    \item \textbf{US3} - Calculate the Universal Parabolic Constant
+    \item \textbf{US4} - Calculate the average distance from arc of parabola
+\end{enumerate}
+
+
+
+\section{Additional Functionalities}
+
+The calculator features a error handler to allow the user to reenter their selections even if they make mistakes, furthermore additional UI formation was done to the output of the calculator to allow the users with ease of user when using the calculator and understanding the results. 
+
+
 \chapter{References}
 \begin{quote}
     
 
 \begin{enumerate}
 \item  {\it Universal parabolic constant\/} www.revolvy.com/page/Universal-parabolic-constant?cr=1,2005).
-\item Nick Babich, The Art of the User Interview, {medium.springboard.com/the-art-of-the-user-interview-cf40d1ca62e8 , Oct 9, 2017}
-\item  {\it Universal parabolic constant Wolfram Analysis\\}  
-http://mathworld.wolfram.com/UniversalParabolicConstant.html.
+
 \end{enumerate}
 
 
