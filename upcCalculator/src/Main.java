@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -10,13 +11,16 @@ public class Main {
         char unit;
         String a="";
         boolean go = true;
+        DecimalFormat df = new DecimalFormat("#.##"); // Output format initializer
 
 
         double result = 0.00;
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("-----Welcome,Please Select your unit---------\n" +
+        System.out.println(
+
+                "-Welcome,Please Select your input unit----------\n" +
                 "1 for Centimiter\n" +
                 "2 for meter\n" +
                 "3 for Inches\n" +
@@ -42,7 +46,7 @@ public class Main {
                     break;
                 default:
 
-                    System.err.println("Invalid option selected");
+                    System.err.println("Invalid option selected"); /*Error Handling */
                     break;
             }
         }
@@ -60,7 +64,8 @@ public class Main {
         System.out.println("Please Enter your Second Numnber");
         y = input.nextFloat();
 
-        System.out.println("--Please Select your Operation---------\n" +
+        System.out.println(
+                "--Please Select your Operation---------------------\n" +
                 "+ for Add\n" +
                 "- for Substract\n" +
                 "/ for Divide\n" +
@@ -73,7 +78,7 @@ public class Main {
             operator = input.next().charAt(0);
 
 
-            switch (operator) {
+            switch (operator) {  /*Calculator Operand Selection  */
 
 
                 case '+':
@@ -102,27 +107,30 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Incorrect operator, Please Select Again");
+                    System.out.println("Incorrect operator, Please Select Again"); /*Error Handling */
                     break;
             }
 
 
             if (operator=='s'||operator=='p'){
 
-                System.out.println("-Result---------------------------\n"+
+                System.out.println(
+                        "-Result---------------------------------------\n"+
                         result+"\n"+
                         "----------------------------------------------");
 
             }
             else {
-                System.out.println("-Result---------------------------\n"+
-                        result+a+"\n"+
+                System.out.println(
+                        "-Result----------------------------------------\n"+
+
+                        df.format(result)+a+"\n"+
                         "-----------------------------------------------");
             }
 
         }}
 
-    public static double sqrtRoot() {
+    public static double sqrtRoot() {/*Square Root Calculation Method */
         double d = 2;
         if (d == 0) {
             return 0;
@@ -144,10 +152,10 @@ public class Main {
         return x2;
     }
 
-    public static double calconst() {
+    public static double calconst() {  /*Universal Parabolic Constant + Natural Log Calculation*/
         double v = sqrtRoot();
         double lnofx; //result
-        double x = (1 + v) + v;
+        double x = (1 + v) + v;  /*Constant Equation*/
         double y;
         double ySquared;
         double upc=0.0;
