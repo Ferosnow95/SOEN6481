@@ -9,9 +9,6 @@ public class Main {
         core();
 
 
-        String result = output();
-        System.out.println(result.split(";"));
-
     }
 
 
@@ -74,39 +71,28 @@ public class Main {
                     break;
             }
 
+            if (operator == 's' || operator == 'p') {
+
+                System.out.println(
+                        "-Result---------------------------------------\n" +
+                                df2.format(result) + "\n" +
+                                "----------------------------------------------");
+
+            } else {
+                System.out.println(
+                        "-Result----------------------------------------\n" +
+
+                                df.format(result) + a + "\n" +
+                                "-----------------------------------------------");
+
+            }
+
 
         }
-
         return result;
     }
 
-
-    public static String  output() {
-
-
-
-        if (operator == 's' || operator == 'p') {
-
-            System.out.println(
-                    "-Result---------------------------------------\n" +
-                            df2.format(result) + "\n" +
-                            "----------------------------------------------");
-
-        } else {
-            System.out.println(
-                    "-Result----------------------------------------\n" +
-
-                            df.format(result) + a + "\n" +
-                            "-----------------------------------------------");
-        }
-
-        double result = core();
-
-
-        return result+";"+operator+"";
-
-
-        public static String unitSelection() {
+        public static String unitSelection () {
 
             char unit;
             String a = "";
@@ -146,7 +132,6 @@ public class Main {
             }
             return a;
         }
-
 
         public static double caladd () {
 
