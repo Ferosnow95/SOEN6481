@@ -1,11 +1,7 @@
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class junitTest {
 

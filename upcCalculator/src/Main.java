@@ -17,7 +17,7 @@ public class Main {
     {
         Scanner input = new Scanner(System.in);
         return input.next().charAt(0);
-    } Redundent class call*/ 
+    } Redundent class call*/
 
     public static double calculate() {
 
