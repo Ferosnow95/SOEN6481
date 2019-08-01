@@ -13,19 +13,19 @@ public class Main {
 
     }
 
-   /* public static char GetOp()
+    public static char GetOp()
     {
         Scanner input = new Scanner(System.in);
         return input.next().charAt(0);
-    } Redundent class call*/
+    }
 
     public static double calculate() {
 
 
         String a = unitSelection();
-        DecimalFormat df = new DecimalFormat("#.##");  // Output format initializer 2DP
-        DecimalFormat df2 = new DecimalFormat("#.##########"); // Output format initializer 10DP
+
         char operator='@';
+
         double result = 0.00;
         boolean go = true;
 
@@ -33,7 +33,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         System.out.println(
-                        "-----Please Select your Operation------------------\n" +
+                "---Please Select your Operation--------------------\n" +
                         "+ for Add\n" +
                         "- for Substract\n" +
                         "/ for Divide\n" +
@@ -43,7 +43,7 @@ public class Main {
                         "\"-------------------------------------------------\" ");
 
         while (go) {
-            //operator = GetOp();
+            operator = GetOp();
             switch (operator) {  /*Calculator Operand Selection  */
 
 
@@ -80,18 +80,20 @@ public class Main {
 
 
 
+        DecimalFormat df = new DecimalFormat("#.##");  // Output format initializer 2DP
+        DecimalFormat df2 = new DecimalFormat("#.##########"); // Output format initializer 10DP
 
 
         if (operator == 'p') {
 
             System.out.println(
-                            "-Result---------------------------------------\n" +
+                    "-Result---------------------------------------\n" +
                             df2.format(result) + "\n" +
                             "----------------------------------------------");
 
         } else if(operator =='s'){
             System.out.println(
-                            "-Result----------------------------------------\n" +
+                    "-Result----------------------------------------\n" +
                             df2.format(result) + a + "\n" +
                             "-----------------------------------------------");
 
@@ -99,7 +101,7 @@ public class Main {
 
         }
         else{ System.out.println(
-                         "-Result----------------------------------------\n" +
+                "-Result----------------------------------------\n" +
                         df.format(result) + a + "\n" +
                         "-----------------------------------------------");;
 
@@ -110,7 +112,32 @@ public class Main {
 
 
 
+    /*public static void output()
+    {
 
+        char operator = GetOp();
+        String a = unitSelection();
+        double result=calculate();
+
+        DecimalFormat df = new DecimalFormat("#.##");  // Output format initializer 2DP
+        DecimalFormat df2 = new DecimalFormat("#.##########"); // Output format initializer 10DP
+
+
+        if (operator == 's' || operator == 'p') {
+
+            System.out.println(
+                    "-Result---------------------------------------\n" +
+                            df2.format(result) + "\n" +
+                            "----------------------------------------------");
+
+        } else {
+            System.out.println(
+                    "-Result----------------------------------------\n" +
+                            df.format(result) + a + "\n" +
+                            "-----------------------------------------------");
+
+        }
+    }*/
 
     public static String unitSelection () {
 
