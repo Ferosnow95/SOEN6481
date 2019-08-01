@@ -1,7 +1,11 @@
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.HashMap;
+import java.util.Map;
+
+import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 public class junitTest {
 
@@ -17,6 +21,7 @@ public class junitTest {
     }
 
     @Test
+
     public void testCaladd(){
 
 

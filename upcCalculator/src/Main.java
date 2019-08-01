@@ -1,7 +1,19 @@
+import MemontoCache.PreviousCalculation;
+import MemontoCache.PreviousCalculationImp;
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
+
+    private static double firstNumber;
+    private static double secondNumber;
+    private static double result;
+
+    private static PreviousCalculation memo ;
+
+
+
 
     public static void main(String[] args) {
 
@@ -87,13 +99,13 @@ public class Main {
         if (operator == 'p') {
 
             System.out.println(
-                    "-Result---------------------------------------\n" +
+                            "-Result---------------------------------------\n" +
                             df2.format(result) + "\n" +
                             "----------------------------------------------");
 
         } else if(operator =='s'){
             System.out.println(
-                    "-Result----------------------------------------\n" +
+                           "-Result----------------------------------------\n" +
                             df2.format(result) + a + "\n" +
                             "-----------------------------------------------");
 
@@ -101,7 +113,7 @@ public class Main {
 
         }
         else{ System.out.println(
-                "-Result----------------------------------------\n" +
+                        "-Result----------------------------------------\n" +
                         df.format(result) + a + "\n" +
                         "-----------------------------------------------");;
 
@@ -114,28 +126,21 @@ public class Main {
 
     /*public static void output()
     {
-
         char operator = GetOp();
         String a = unitSelection();
         double result=calculate();
-
         DecimalFormat df = new DecimalFormat("#.##");  // Output format initializer 2DP
         DecimalFormat df2 = new DecimalFormat("#.##########"); // Output format initializer 10DP
-
-
         if (operator == 's' || operator == 'p') {
-
             System.out.println(
                     "-Result---------------------------------------\n" +
                             df2.format(result) + "\n" +
                             "----------------------------------------------");
-
         } else {
             System.out.println(
                     "-Result----------------------------------------\n" +
                             df.format(result) + a + "\n" +
                             "-----------------------------------------------");
-
         }
     }*/
 
@@ -184,16 +189,14 @@ public class Main {
 
 
         Scanner input = new Scanner(System.in);
-        float x;
-        float y;
 
         System.out.println("Please Enter your first Numnber");
-        x = input.nextFloat();
+        firstNumber = input.nextFloat();
 
         System.out.println("Please Enter your Second Numnber");
-        y = input.nextFloat();
+        firstNumber = input.nextFloat();
 
-        double result = x + y;
+        double result = firstNumber + secondNumber;
         return result;
     }
 
@@ -202,15 +205,13 @@ public class Main {
 
 
         Scanner input = new Scanner(System.in);
-        float x;
-        float y;
 
         System.out.println("Please Enter your first Numnber");
-        x = input.nextFloat();
+        firstNumber = input.nextFloat();
 
         System.out.println("Please Enter your Second Numnber");
-        y = input.nextFloat();
-        double result = x - y;
+        firstNumber = input.nextFloat();
+        double result = firstNumber - secondNumber;
         return result;
     }
 
@@ -218,45 +219,37 @@ public class Main {
 
 
         Scanner input = new Scanner(System.in);
-        float x;
-        float y;
 
         System.out.println("Please Enter your first Numnber");
-        x = input.nextFloat();
+        firstNumber= input.nextFloat();
 
         System.out.println("Please Enter your Second Numnber");
-        y = input.nextFloat();
-        double result = x / y;
+        secondNumber = input.nextFloat();
+        result = firstNumber / secondNumber;
         return result;
     }
 
     public static double calmultiply () {
 
-
         Scanner input = new Scanner(System.in);
-        float x;
-        float y;
 
         System.out.println("Please Enter your first Numnber");
-        x = input.nextFloat();
+        firstNumber= input.nextFloat();
 
         System.out.println("Please Enter your Second Numnber");
-        y = input.nextFloat();
-        double result = x * y;
+        secondNumber = input.nextFloat();
+        result = firstNumber * secondNumber;
         return result;
     }
 
     public static double caldistance () {
-
-
         Scanner input = new Scanner(System.in);
-        float x;
         double upc = calconst();
 
         System.out.println("Please enter your distance point");
-        x = input.nextFloat();
+        firstNumber = input.nextFloat();
 
-        double result = upc / x;
+        result = upc / firstNumber;
         return result;
     }
 
@@ -318,8 +311,37 @@ public class Main {
 
 
     }
+
+
+    public static void numberCache(){
+        memo = new PreviousCalculationImp();
+        memo.setFirstNumber(firstNumber);
+        memo.setSecondNumber(secondNumber);
+        memo.setResult(result);
+    }
+
+
+    public static double getFirstNumber() {
+        return firstNumber;
+    }
+
+    public static void setFirstNumber(double firstNumber) {
+        Main.firstNumber = firstNumber;
+    }
+
+    public static double getSecondNumber() {
+        return secondNumber;
+    }
+
+    public static void setSecondNumber(double secondNumber) {
+        Main.secondNumber = secondNumber;
+    }
+
+    public static double getResult() {
+        return result;
+    }
+
+    public static void setResult(double result) {
+        Main.result = result;
+    }
 }
-
-
-
-
