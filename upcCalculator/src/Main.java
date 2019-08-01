@@ -13,11 +13,11 @@ public class Main {
 
     }
 
-    public static char GetOp()
+   /* public static char GetOp()
     {
         Scanner input = new Scanner(System.in);
         return input.next().charAt(0);
-    }
+    } Redundent class call*/ 
 
     public static double calculate() {
 
@@ -43,7 +43,7 @@ public class Main {
                         "\"-------------------------------------------------\" ");
 
         while (go) {
-            operator = GetOp();
+            //operator = GetOp();
             switch (operator) {  /*Calculator Operand Selection  */
 
 
@@ -292,3 +292,7 @@ public class Main {
 
     }
 }
+
+
+
+
