@@ -93,7 +93,7 @@
 
 \title{The Universal Parabolic Constant\\ \textbf{Eternity Numbers (D2)}}
 \date{2018\\ July}
-\author{By Ali Zafar Iqbal\\\\ Department of Computer Science \\Concordia University }
+\author{By Ali Zafar Iqbal\\\\ Department of Computer Science \\Concordia University\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Project Repository \textbf{https://github.com/Ferosnow95/SOEN6481} }
 
 % Include the date 
 \date{}
@@ -122,10 +122,15 @@
 
 \chapter{User Stories}
     
-   Project based user stories are created to try and comprehend the scope of the project's  base user requirements .  As one of the prerequisites for the project report,  The following initial User stories were created so characterize the user requirements for the calculator and its overarching functionalities, as a global constraint for the calculator, all of the processed results for \textbf{Arithmetic operands} should output for in atleast 2 Decimal places.
-   \hfill \break\\
+   Project based user stories are created to try and comprehend the scope of the project's  base user requirements .  As one of the prerequisites for the project report,  The following initial User stories were created so characterize the user requirements for the calculator and its overarching functionalities, \\
+   There are \textbf{two global constraints} for the UPCcalculator, \begin{enumerate}
    
-   \noindent User Stories were prioritize based on the hypothesized domain knowledge of the concrete architecture of a calculator in the previous deliverable  and the actual user requirements for the UPC Calculator, Variables such functional dependencies also contributed to the prioritization decisions to streamline the implementation process and conserve time. The \textbf{Fibonacci Sequence} was used for user story estimation.
+       \item All of the processed results for \textbf{Arithmetic operands} should output for in at least 2 Decimal places.
+       \item All output displays of the calculator should be defined and formatted with consistency to allow users recognise outputs more easily.
+   \end{enumerate}
+   
+   
+   \noindent User Stories are prioritize based on the hypothesized domain knowledge of the concrete architecture of a calculator and the actual user requirements for the UPC Calculator a illustrated in the previous deliverable  , Variables such functional dependencies also contributed to the prioritization decisions to streamline the implementation process and conserve time. The \textbf{Fibonacci Sequence} was used for user story estimation.
 
 \begin{quote}
                 \section{US1 - Select and allow Numerical input}
@@ -140,22 +145,18 @@
                  \hline
                  \textbf{Description}   & As an user of calculator, I want to easily input digital numerical numbers of my choosing so that I can perform the calculations I want.  \\
                  \hline
-                 \textbf{Acceptance}& 
-                
-                 - I know I'm done when I press the displayed number is equal to the numerical press on the keyboard
-                
-                \\
+                 \textbf{Acceptance Test}&I know I'm done when I press the displayed number is equal to the numerical press on the keyboard\\
+                   \hline
+                 \textbf{Acceptance Criteria}& The user should be able to input the numbers using the keyboard or a numeric pad.\\
                  \hline
-                 \textbf{Estimate} &  1  point  \\
+                 \textbf{Estimate} & 5  points  \\
                  \hline
-                 \textbf{Constrains}& The display cannot start from 0 ie Input 01 = "1" / Must not accept characters  \\
+                 \textbf{Constrains}& The display cannot start from 0 ie Input 01 = "1"  \\
                 \hline
-                
-                  \hline
-                 \textbf {}&User Story Implemented \\
+                 \textbf {Implementation}&User Story Implemented \\
                 \hline
                 \end{tabular}
-            \hfill\break\\\\
+      
                 
         
         
@@ -172,22 +173,25 @@
                  \hline
                  \textbf{Description}   &  As an user of calculator, I want to be able to chose form a selection of all the Arithmetic mathematical operations so that I can perform my calculations   \\
                  \hline
-                 \textbf{Acceptance}& 
-                
-                 - I know I am done When the operations related to the selected opened is displayed and available for selection 
-                
-                \\
+                 \textbf{Acceptance Test}&  I know I am done When the operations related to the selected opened is displayed and available for selection
+                 \begin{enumerate}
+                     \item  Add Operand : 1+1 =2
+                     \item  Subtract Operand : 2-2=0
+                     \item  Divide Operand : 4/2=2
+                     \item Multiply Operand: 2*2=4
+                 \end{enumerate}
+             \\
                  \hline
-                 \textbf{Estimate} &  3 points  \\
+                 \textbf{Acceptance Criteria}&The User should be able to see and select their desired arithmetic operands when the calculator asks them to do so.\\
+                 \hline
+                 \textbf{Estimate} &  8  points  \\
                  \hline
                  \textbf{Constrains}& The selection display should be legible line after line   \\
                  \hline
-                 \textbf {}&User Story Implemented \\
+                         \textbf {Implementation}&User Story Implemented \\
                 \hline
                 \end{tabular}
-            \hfill\break\\\\
-    
-
+            \hfill\break
        
               \section{US3 - Calculate the Universal Parabolic Constant}
                 \begin{tabular}{ |p{4cm}|p{10cm}| }
@@ -200,42 +204,44 @@
                  \hline
                  \textbf{Description}   & As an user of calculator, I want the calculator to allow the user Universal Parabolic Constant as a constant so that I can utilize it in my calculations/functions \\
                  \hline
-                 \textbf{Acceptance}& 
-                
-                 I know I am done when, I press the "P" constant and the output is approximately "2.29558714939 \\
+                 \textbf{Acceptance Test}& I know I am done when, I press the "P" constant and the output is approximately "2.29558714939 \\
                  \hline
-                 \textbf{Estimate} &  8 points  \\
+                 \textbf{Acceptance Criteria}& The user should be able to press the button "P", to get the constant output \\
+                 \hline
+                 \textbf{Estimate} &  13 points  \\
                  \hline
                  \textbf{Constrains}& The calculator should accurately display  \textbf{at least 10 Decimal places} when showing the results  \\
-                 \hline
-                         \textbf {}&User Story Implemented \\
+                \hline
+                         \textbf {Implementation}&User Story Implemented \\
                 \hline
                 \end{tabular}
-            \hfill\break\\
             
              \section{US4 - Calculate the approximate distance from arc of parabola}
                 \begin{tabular}{ |p{4cm}|p{10cm}| }
                  \hline
-                 \multicolumn{2}{|c|}{\textbf{US4 -Calculate the approximate distance from arc of parabola} } \\
+                 \multicolumn{2}{|c|}{\textbf{US4 -Calculate the approximate distance from arc of parabola} }\\
                  \hline
-                 \textbf {Story ID}& US4  \\
+                 \textbf {Story ID}& US4 \\
                  \hline
                  \textbf{Priority} & HIGH \\
                  \hline
-                 \textbf{Description}   & As an user of calculator, I want to be able calculate the Arc distance from my entered point utilizing the Universal parabolic constant so that, I can get the approximate distance to the arc extreme from the point.  \\
+                 \textbf{Description}   & As an user of calculator, I want to be able calculate the Arc distance from my entered point utilizing the Universal parabolic constant so that, I can get the approximate distance to the arc extreme from the point.\\
                  \hline
-                 \textbf{Acceptance}& 
-                
-                 I know I am done when,  When the result output is within the range of the the actual approximate distance. \\
+                 \textbf{Acceptance Test}&I know I am done when, When the result output is within the range of the the actual approximate distance.\\
                  \hline
-                 \textbf{Estimate} &  2  points  \\
+                 \textbf{Acceptance Criteria}&\begin{enumerate}
+                     \item The user should be able to press the function button "S" to initiate the function.
+                     \item The user should be able to enter the their distance point that needs to be calculated.
+                 \end{enumerate}\\
                  \hline
-                 \textbf{Constrains}& The result output should be displayed in the selected input units  \\
+                 \textbf{Estimate} &  5  points  \\
                  \hline
-                         \textbf {}&User Story Implemented \\
+                 \textbf{Constrains}& The result output should be displayed as per the selected input unit.  \\
+                 \hline
+                         \textbf {Implementation}&User Story Implemented \\
                 \hline
                 \end{tabular}
-            \hfill\break\\
+            \hfill\break
             
             
             
@@ -250,17 +256,21 @@
                  \hline
                  \textbf{Description}   & As an user of calculator, I want to be able to calculate the approximate surface area within a simulated arc utilizing the Universal parabolic constant so that, I can get the approximate  surface area covered by the arc. \\
                  \hline
-                 \textbf{Acceptance}& 
-                
-                 I know I am done when,  When the result output is within the range of the the actual average area. \\
+                 \textbf{Acceptance Test}&I know I am done when,  When the result output is within the range of the the actual average area.\\
                  \hline
-                 \textbf{Estimate} &  2  points  \\
+                 \textbf{Acceptance Criteria}&\begin{enumerate}
+                     \item The user should be able to press the function button "Ar" to initiate the function 
+                     \item The user should be able to enter the their axis points for the area to be calculated.
+                 \end{enumerate}\\
                  \hline
-                 \textbf{Constrains}& The result output should be displayed in "cm" value with 2 decimal places of  accuracy \\
+                 \textbf{Estimate} &  8 points  \\
+                 \hline
+                 \textbf{Constrains}& The calculator should accurately display  \textbf{atleast 10 Decimal places} when showing the results.\\
+                 
                  \hline
                  
                 \end{tabular}
-            \hfill\break\\
+       
             
               \section{US6 - Generate area of surface constant (X-Axis)}
                 \begin{tabular}{ |p{4cm}|p{10cm}| }
@@ -273,16 +283,16 @@
                  \hline
                  \textbf{Description}   & As an user of calculator, I want to be able to press a button to generate the area constant of the Universal parabolic constant In order to utilize it in further calculations. \\
                  \hline
-                 \textbf{Acceptance}& 
-                
-               I know I am done when, I press the "Area x" constant button and the output is approximately "14.4235994" \\
+                 \textbf{Acceptance Test}& I know I am done when, I press the "A(x)" constant button and the output is approximately "14.4235994" \\
                  \hline
-                 \textbf{Estimate} &  2 points  \\
+                 \textbf{Acceptance Criteria}& The user should be able to press the button "A(x)", to get the constant output.\\
+                 \hline
+                 \textbf{Estimate} &  5 points  \\
                  \hline
                  \textbf{Constrains}&  The calculator should accurately display  \textbf{atleast 10 Decimal places} when showing the results   \\
                  \hline
                 \end{tabular}
-            \hfill\break\\
+
             
             
              
@@ -290,24 +300,20 @@
         
             
         \end{quote}
-     
-        
-      
-        
-
-        
-      
-
-
-    
  \newpage
 
 \chapter{Backwards Tractability Matrix}
 
 
-Tractability is useful element in SRS documentation which allows development teams to analyse documentations and trace problems to their initial inceptions, as one of the requirements for this project's documentation process, enlisted user stories are back traced to their initial sources to allow reliable context to their eventual implementations,
+Tractability is useful element in SRS documentation which allows development teams to analyse documentations and trace problems to their initial inceptions, as one of the requirements for this project's documentation process, enlisted user stories are back traced to their initial sources to allow reliable context to their eventual implementations\\\\
+\noindent The following table illustrates the active sources utilized for the creation of the user stories and eventually for the functionalities embedded in the UPC calculator.
+\\\\
+\noindent \textbf {Sources Descriptions}
+\item  \textbf {Deliverable 1} Domain and Use Case Modelling 
+\item  \textbf {Interview: Source}: (D1) Haneen Zafar Iqbal.
+\item  \textbf {Online Sources}: Universal Parabolic Constant Applications & Analysis[2]
 
-    
+
 \begin{quote}
 \centering 
 \hfill
@@ -325,13 +331,13 @@ US\#2 &&&\checkmark&\checkmark\\
 US\#3&\checkmark&\checkmark&\checkmark&\checkmark\\
 \hline
 
-US\#4&\checkmark&&\checkmark&\checkmark\\
+US\#4&\checkmark&\checkmark&\checkmark&\checkmark\\
 \hline
 
-US\#5&&\checkmark&&\\
+US\#5&\checkmark&\checkmark&&\\
 \hline
 
-US\#6&\checkmark&\checkmark&&\\
+US\#6&&\checkmark&&\\
 \hline
 
 \hline
@@ -341,11 +347,19 @@ US\#6&\checkmark&\checkmark&&\\
 \end{quote}
 
 
+    
+ 
+
+
+        
+
+
+
 \chapter{Implementation}
 
-The  Universal Parabolic (\textbf{UPC calculator}) calculator is implemented in the form of an conditional based calculator, where the user can perform calculations based on their selection of parameters/operands. The calculator also utilizes the Universal parabolic constant to calculate the approximate point distance from a parabolic arc. both of which are implemented from scratch in JAVA without the use of any library functions. 
+The  Universal Parabolic (\textbf{UPC calculator}) calculator is implemented in the form of an conditional based calculator, where the user can perform calculations based on their selection of parameters/operands. The calculator also utilizes the Universal parabolic constant to calculate the approximate point distance from a parabolic arc. both of which are implemented from scratch in JAVA without the use of any library functions. executable JAR files can be found side the source code, to allow an easier analysis of the calculator's functions. 
 \hfill\break\\
-\noindent The Source of the calculator can be found on the linked repository [1] or attached to this document.
+\noindent The Source of the calculator can be found on the linked repository [3] or attached to this document in a later section. Furthermore, 
 
 \section{User Stories Implemented}
 
@@ -358,6 +372,12 @@ The following user stories were implemented in the UPC calculator, the User stor
     \item \textbf{US4} - Calculate the average distance from arc of parabola
 \end{enumerate}
 
+\section{Acceptance Testing}
+The user stories acceptance tests were conducted in code using a sandbox implementation of \textbf{Junit (Unit Testing)} for every core calculator class. this was done to streamline the testing process of the calculator's functions and allow easier future development/analysis of the UPC calculator.   
+
+\section{Code Structure}
+
+The java implementation was I done ion the utilizing the memento design pattern. all of the calculator's functions were dedicated to their on method classes to allow for easier code maintainability and reuse ability and the momentocache Class was utilized to store the users numbers temporally for calculation and result purposes.  
 
 
 \section{Additional Functionalities}
@@ -369,13 +389,13 @@ The calculator features a error handler to allow the user to reenter their selec
 \begin{quote}
     
 
-\begin{enumerate}
-\item  {\it Universal parabolic constant\/} www.revolvy.com/page/Universal-parabolic-constant?cr=1,2005).
+[1] \textbf{Reese, Sylvester and Sondow}, Jonathan. "Universal Parabolic Constant." From MathWorld--A Wolfram Web Resource, created by Eric W. Weisstein.\\ http://mathworld.wolfram.com/UniversalParabolicConstant.html\\
 
-\end{enumerate}
+[2] {\it Calculator Function Keys\/}\\
+https://docs.oracle.com/cd/E19455-01/806-2901/6jc3a4lu1/index.html).
 
 
-        
+
 
 \end{quote}
 
