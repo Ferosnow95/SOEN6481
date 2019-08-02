@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"junitTest"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"testClass"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"junitTest"},{"p":"<Unnamed>","l":"Main"},{"p":"MemontoCache","l":"PreviousCalculation"},{"p":"MemontoCache","l":"PreviousCalculationImp"},{"p":"<Unnamed>","l":"testClass"}]
